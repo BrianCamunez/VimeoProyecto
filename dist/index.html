@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="/styles/bootstrap.css">
+  <style>
+    /* Estilos básicos para visualizar y editar los divs */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contenedor {
+      padding: 20px;
+    }
+
+    .header {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .body {
+      margin-top: 20px;
+    }
+
+    .seccion1, .seccion2, .seccion3, .seccion4, .seccion5, .seccion6, .seccion7 {
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .seccion1 h2, .seccion1 h4, .seccion2 h3, .seccion2 h5, .seccion3 h5,
+    .seccion3 h2, .seccion4 h5, .seccion4 h3, .seccion5 h5, .seccion5 h3,
+    .seccion6 h5, .seccion6 h3, .seccion7 h3 {
+      margin: 10px 0;
+    }
+
+    .seccion2 img, .seccion3 img, .seccion4 img, .seccion5 img, .seccion6 img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .d-flex {
+      display: flex;
+      gap: 20px;
+    }
+
+    .w-50 {
+      width: 50%;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand {
+      color: white;
+    }
+
+    .navbar-nav .nav-link {
+      color: white;
+    }
+
+    .footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+      border-top: 2px solid #ddd;
+    }
+
+    .bg-info {
+      background-color: #17a2b8;
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    /* Estilos para mejorar la visibilidad */
+    .navbar-nav li {
+      padding: 5px;
+    }
+
+    .seccion1, .seccion2, .seccion3, .seccion4, .seccion5, .seccion6, .seccion7 {
+      border: 2px solid #ccc;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-CGsCn2e8.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DevuBC_U.css">
+</head>
+
+<body>
+  <div class="contenedor">
+    <div class="header">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Vimeo(logoa)</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Producto
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Soluciones
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Conocer
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Precio</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Ver</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="#" class="nav-link">Comunicarse con Ventas</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Iniciar sesión</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Unise (icono flecha derecha)</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="body">
+      <div class="seccion1">
+        <h2>Haga más con sus videos</h2>
+        <h4>Conozca la plataforma de video completa que puede transformar su manera de hacer negocios.</h4>
+        <div class="d-flex">
+          <button class="btn btn-primary">Ver los planes (icono)</button>
+          <button class="btn btn-primary">Unirse gratis (icono)</button>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNxFFYy9zjsJZVubV5yvwhAV6EpfS34mHGGg&s"
+          alt="imagen">
+      </div>
+
+      <div class="seccion2">
+        <div class="seccion2Arriba">
+          <h3>Su paquete completo de herramientas de video</h3>
+          <h5>Obtenga todo lo que necesita para editar, gestionar y publicar videos impactantes que generen resultados.</h5>
+          <button class="btn btn-primary">Solicitar una demostración (icono)</button>
+        </div>
+        <div class="seccion2Abajo">
+          <h3>La plataforma de confianza de 287 millones de creadores, empresarios y negocios</h3>
+          <img src="image.png" alt="">
+        </div>
+      </div>
+
+      <div class="seccion3">
+        <h5>Las mejores experiencias de video en Internet, en un mismo lugar</h5>
+        <h2>Su plataforma de video impulsada por IA</h2>
+        <div class="d-flex">
+          <div class="w-50">
+            <img src="imgen2.png" alt="iamgen2">
+          </div>
+          <div class="w-50">
+            <h4>Alojamiento y reproductor</h4>
+            <p>Aloje sus videos con nuestro reproductor HD sin anuncios. Dondequiera que los inserte o comparta, su diseño de reproductor personalizado y su marca los acompañarán.</p>
+            <button class="btn btn-primary">(icono flecha)</button>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="w-50">
+            <img src="imagen3.png" alt="imagen">
+            <h4>Creación y edición</h4>
+            <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que sus videos se destaquen.</p>
+            <button class="btn btn-primary">(icono flecha)</button>
+          </div>
+          <div class="w-50">
+            <img src="imagen3.png" alt="imagen">
+            <h4>Creación y edición</h4>
+            <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que sus videos se destaquen.</p>
+            <button class="btn btn-primary">(icono flecha)</button>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="w-50">
+            <img src="imagen3.png" alt="imagen">
+            <h4>Creación y edición</h4>
+            <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que sus videos se destaquen.</p>
+            <button class="btn btn-primary">(icono flecha)</button>
+          </div>
+          <div class="w-50">
+            <img src="imagen3.png" alt="imagen">
+            <h4>Creación y edición</h4>
+            <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que sus videos se destaquen.</p>
+            <button class="btn btn-primary">(icono flecha)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccion4">
+        <h5>Mejor flujo de trabajo, mejores resultados</h5>
+        <h3>Herramientas de video para potenciar cualquier negocio</h3>
+        <div class="d-flex">
+          <div class="w-50">
+            <img src="imgen2.png" alt="imagen">
+          </div>
+          <div class="w-50">
+            <h4>Seguridad y cumplimiento</h4>
+            <p>Tanto si es una empresa de Fortune 500, una startup o una organización de otro tipo, descanse tranquilo sabiendo que sus datos están seguros y logre sus objetivos de cumplimiento con nuestras herramientas de seguridad integrales</p>
+            <button class="btn-primary">icono flecha</button>
+          </div>
+        </div>
+        <div class="d-flex">
+          <div>
+            <img src="imgen2.png" alt="iamgen2">
+            <h3>Análisis</h3>
+            <p>Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados en el futuro.</p>
+            <button class="btn btn-primary">icono flecha</button>
+          </div>
+          <div>
+            <img src="imgen2.png" alt="iamgen2">
+            <h3>Análisis</h3>
+            <p>Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados en el futuro.</p>
+            <button class="btn btn-primary">icono flecha</button>
+          </div>
+          <div>
+            <img src="imgen2.png" alt="iamgen2">
+            <h3>Análisis</h3>
+            <p>Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados en el futuro.</p>
+            <button class="btn btn-primary">icono flecha</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Vimeo. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</body>
+
+</html>
