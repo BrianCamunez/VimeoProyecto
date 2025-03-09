@@ -19,18 +19,6 @@
       margin-top: 100px;
     }
 
-    .seccion2 img,
-    .seccion3 img,
-    .seccion4 img,
-    .seccion5 img,
-    .seccion6 img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-
-
     .footer {
       background-color: #f1f1f1;
       padding: 20px;
@@ -39,17 +27,11 @@
       border-top: 2px solid #ddd;
     }
 
-    .seccion1,
-    .seccion2,
-    .seccion3,
-    .seccion4,
-    .seccion5,
-    .seccion6,
-    .seccion7 {
-      border: 2px solid #ccc;
-    }
-
     /* Desde aqui para abajo es mio */
+
+    img {
+      width: 100%;
+    }
 
     .bloque-navbar {
       display: flex;
@@ -158,17 +140,102 @@
     .subMenuProducto {
       display: none;
     }
+
+    .seccion2 {
+      background-color: #f1f1f1;
+    }
+
+    .seccion2Arriba {
+      background-image: url('https://i.vimeocdn.com/custom_asset/8b5bc41926561c9ac287a727ade1f786?w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .cardSeccion3 {
+      background-color: #f1f1f1;
+      border-radius: 20px;
+    }
+
+    .seccion4card {
+      background-color: white;
+      border-radius: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .body {
+        margin-top: 70px;
+      }
+
+      .seccion1 h2 {
+        font-size: 40px !important;
+      }
+
+      .seccion3 h2,
+      .seccion4 h3 {
+        font-size: 30px !important;
+        width: 100% !important;
+      }
+    }
+
+    .prueba-iconos{
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      position: relative;
+      z-index: 10;
+      background-color: #17d5ff;
+      transition: background-color 0.3s;
+      width: 80px;
+      height: 40px;
+    }
+
+
+    .prueba-iconos .flecha-izquierda,
+    .prueba-iconos .flecha-derecha {
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .prueba-iconos .flecha-izquierda {
+      left: 0%;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .prueba-iconos .flecha-derecha {
+      left: 50%;
+    }
+
+    .prueba-iconos:hover .flecha-izquierda {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(50%, -50%);
+    }
+
+    .prueba-iconos:hover .flecha-derecha {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(100%, -50%);
+    }
+
+    .prueba-iconos:hover {
+      background-color: #00aacf;;
+    }
+
   </style>
 </head>
 
 <body>
   <div class="contenedor">
     <div class="header"
-      style="position: fixed; width: 100%; z-index: 100; padding-left: 10%; padding-right: 15%; top: 0;">
+      style="position: fixed; width: 100%; z-index: 100; top: 0; background-color: rgba(255,255,255,0.9);">
       <nav class="navbar navbar-expand-lg justify-content-center align-items-center text-center"
         style="background-color: transparent;">
-        <div class="container-fluid">
-          <a class="navbar" href="#"><img src="Vimeo_logo.png" alt="Logo Vimeo" width="98px" height="52px" style="border: greenyellow 3px solid; position: sticky;"></a>
+        <div class="container">
+          <a class="navbar" href="#"><img src="Vimeo_logo.png" alt="Logo Vimeo" width="98px" height="52px"
+              style="border: greenyellow 3px solid; position: sticky;"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -191,42 +258,42 @@
                 </div>
                 <div style="border: blue 3px solid;">
                   <div class="subMenuProducto">
-                      <div class="container-fluid w-100">
-                        <div class="row">
-                          <div class="col-3">
-                            <h5>Alojamiento y reproductor</h5>
-                            <ul>
-                              <li>(icono) Reproductor de video</li>
-                              <li>(icono) Alojamientos de videos</li>
-                            </ul>
-                          </div>
-                          <div class="col-3">
-                            <h5>Creación y edición</h5>
-                            <ul>
-                              <li>(icono) Grabar</li>
-                              <li>(icono) Editor de videos</li>
-                              <li>(icono) Realizador de videos</li>
-                            </ul>
-                          </div>
-                          <div class="col-3">
-                            <h5>Monetización de videos</h5>
-                            <ul>
-                              <li>(icono) OTT</li>
-                              <li>(icono) Video on Demand</li>
-                            </ul>
-                          </div>
-                          <div class="col-3">
-                            <h5>Nuevos lanzamientos</h5>
-                            <ul>
-                              <li>(icono) Lanzamientos de otoño 2024</li>
-                              <li>(icono) Lanzamientos del T3 2024</li>
-                              <li>(icono) Lanzamientos del T2 2024</li>
-                              <li>(icono) Lanzamientos del T1 2024</li>
-                            </ul>
-                          </div>
+                    <div class="container-fluid w-100">
+                      <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                          <h5>Alojamiento y reproductor</h5>
+                          <ul>
+                            <li>(icono) Reproductor de video</li>
+                            <li>(icono) Alojamientos de videos</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <h5>Creación y edición</h5>
+                          <ul>
+                            <li>(icono) Grabar</li>
+                            <li>(icono) Editor de videos</li>
+                            <li>(icono) Realizador de videos</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <h5>Monetización de videos</h5>
+                          <ul>
+                            <li>(icono) OTT</li>
+                            <li>(icono) Video on Demand</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <h5>Nuevos lanzamientos</h5>
+                          <ul>
+                            <li>(icono) Lanzamientos de otoño 2024</li>
+                            <li>(icono) Lanzamientos del T3 2024</li>
+                            <li>(icono) Lanzamientos del T2 2024</li>
+                            <li>(icono) Lanzamientos del T1 2024</li>
+                          </ul>
                         </div>
                       </div>
-                </div>
+                    </div>
+                  </div>
               </li>
               <li class="nav-item">
                 <a href="#" style="color: black;" class="nav-link">
@@ -299,122 +366,513 @@
     </div>
 
     <div class="body">
-      <div class="seccion1">
-        <h2>Haga más con sus videos</h2>
-        <h4>Conozca la plataforma de video completa que puede transformar su manera de hacer negocios.</h4>
-        <div class="d-flex">
-          <button class="btn btn-primary">Ver los planes (icono)</button>
-          <button class="btn btn-primary">Unirse gratis (icono)</button>
+      <div class="seccion1 text-center container py-4">
+        <h2 style="font-size: 90px;">Haga más con sus videos</h2>
+        <h4 class="h5">Conozca la plataforma de video completa que puede transformar su manera de hacer negocios.</h4>
+        <div class="d-flex justify-content-center gap-1">
+          <div class="py-1 px-3 d-flex align-items-center rounded unirse-div m-2" style="background-color: #e2e2e2">
+            <a href="#" class="nav-link text-dark px-2">Unirse gratis</a>
+            <div class="fondo-color"></div>
+            <div class="rounded d-flex padre-iconos py-3 px-4" style="color: black;">
+              <div class="icon-left w-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                </svg>
+              </div>
+              <div class="icon-right w-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="py-1 px-3 d-flex align-items-center rounded unirse-div m-2" style="background-color: #e2e2e2">
+            <a href="#" class="nav-link text-dark px-2">Unirse gratis</a>
+            <div class="fondo-color"></div>
+            <div class="rounded d-flex padre-iconos py-3 px-4" style="color: black;">
+              <div class="icon-left w-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                </svg>
+              </div>
+              <div class="icon-right w-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNxFFYy9zjsJZVubV5yvwhAV6EpfS34mHGGg&s"
-          alt="imagen">
+        <div class="videoSeccion1 py-5 justify-content-center d-flex">
+          <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+            <video width="100%" height="auto" autoplay loop muted playsinline class="img-fluid">
+              <source
+                src="https://player.vimeo.com/progressive_redirect/playback/938226648/rendition/1080p/file.mp4?loc=external&signature=b1d907631c774c4dba6d9b4530f6db8ea5be4d9e5225df477b2b16dba0e080fb"
+                type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </div>
 
       <div class="seccion2">
-        <div class="seccion2Arriba">
-          <h3>Su paquete completo de herramientas de video</h3>
-          <h5>Obtenga todo lo que necesita para editar, gestionar y publicar videos impactantes que generen resultados.
-          </h5>
-          <button class="btn btn-primary">Solicitar una demostración (icono)</button>
+        <div class="seccion2Arriba py-5 px-3 px-md-5" style="color: white">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-8 col-lg-6 ms-md-auto">
+                <h3 class="h1">Su paquete completo de herramientas de video</h3>
+                <h5 class="h5">Obtenga todo lo que necesita para editar, gestionar y publicar videos impactantes que
+                  generen
+                  resultados.
+                </h5>
+                <div class="py-1 px-3 d-flex align-items-center rounded unirse-div"
+                  style="background-color: #e2e2e2; max-width: 300px;">
+                  <a href="#" class="nav-link text-dark px-2">Solicita una desmostracion</a>
+                  <div class="fondo-color"></div>
+                  <div class="rounded d-flex padre-iconos py-3 px-4" style="color: black;">
+                    <div class="icon-left w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                    <div class="icon-right w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="seccion2Abajo">
-          <h3>La plataforma de confianza de 287 millones de creadores, empresarios y negocios</h3>
-          <img src="image.png" alt="">
+        <div class="seccion2Abajo py-4 d-flex flex-column align-items-center w-100">
+          <div class="container text-center">
+            <h3 class="mb-4">La plataforma de confianza de 287 millones de creadores, empresarios y negocios</h3>
+          </div>
         </div>
       </div>
 
-      <div class="seccion3">
-        <h5>Las mejores experiencias de video en Internet, en un mismo lugar</h5>
-        <h2>Su plataforma de video impulsada por IA</h2>
-        <div class="d-flex">
-          <div class="w-50">
-            <img src="imgen2.png" alt="iamgen2">
+      <div class="seccion3 container py-5">
+        <div class="text-center mb-5">
+          <h5 class="h4">Las mejores experiencias de video en Internet, en un mismo lugar</h5>
+          <h2 class="py-3" style="font-size: 60px; font-weight: bold; max-width: 800px; margin: 0 auto;">Su plataforma
+            de video
+            impulsada por IA</h2>
+        </div>
+
+        <div class="row cardSeccion3 mb-4">
+          <div class="col-md-6" style="padding-left: 0;">
+            <img src="imgen2.png" alt="iamgen2" class="img-fluid">
           </div>
-          <div class="w-50">
-            <h4>Alojamiento y reproductor</h4>
+          <div class="col-md-6 d-flex flex-column justify-content-center px-4 py-4">
+            <h4 class="h3 fw-bold">Alojamiento y reproductor</h4>
             <p>Aloje sus videos con nuestro reproductor HD sin anuncios. Dondequiera que los inserte o comparta, su
               diseño de reproductor personalizado y su marca los acompañarán.</p>
-            <button class="btn btn-primary">(icono flecha)</button>
+              <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                <div class="flecha-izquierda w-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                  </svg>
+                </div>
+                <div class="flecha-derecha w-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="d-flex">
-          <div class="w-50">
-            <img src="imagen3.png" alt="imagen">
-            <h4>Creación y edición</h4>
-            <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que sus
-              videos se destaquen.</p>
-            <button class="btn btn-primary">(icono flecha)</button>
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <div style="background-color: #f1f1f1; border-radius: 20px; height: 100%;">
+              <img src="https://i.vimeocdn.com/custom_asset/52495987046bfa12a188488ee2d4b6c9?w=654&q=80" alt="imagen"
+                style="border-radius: 20px 20px 0 0;" class="img-fluid">
+              <div class="p-4">
+                <h4 class="h3 fw-bold">Creación y edición</h4>
+                <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que
+                  sus
+                  videos se destaquen.</p>
+                  <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                    <div class="flecha-izquierda w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                    <div class="flecha-derecha w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
-          <div class="w-50">
-            <img src="imagen3.png" alt="imagen">
-            <h4>Creación y edición</h4>
-            <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que sus
-              videos se destaquen.</p>
-            <button class="btn btn-primary">(icono flecha)</button>
+          <div class="col-md-6">
+            <div style="background-color: #f1f1f1; border-radius: 20px; height: 100%;">
+              <img src="https://i.vimeocdn.com/custom_asset/5304f0eac24cd36046c8c4951ac9becf?w=654&q=80" alt="imagen"
+                style="border-radius: 20px 20px 0 0;" class="img-fluid">
+              <div class="p-4">
+                <h4 class="h3 fw-bold">Creación y edición</h4>
+                <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que
+                  sus
+                  videos se destaquen.</p>
+                  <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                    <div class="flecha-izquierda w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                    <div class="flecha-derecha w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="d-flex">
-          <div class="w-50">
-            <img src="imagen3.png" alt="imagen">
-            <h4>Creación y edición</h4>
-            <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que sus
-              videos se destaquen.</p>
-            <button class="btn btn-primary">(icono flecha)</button>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background-color: #f1f1f1; border-radius: 20px; height: 100%;">
+              <img src="https://i.vimeocdn.com/custom_asset/446f2e5a266768cd0e979198ad3446be?w=654&q=80" alt="imagen"
+                style="border-radius: 20px 20px 0 0;" class="img-fluid">
+              <div class="p-4">
+                <h4 class="h3 fw-bold">Creación y edición</h4>
+                <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que
+                  sus
+                  videos se destaquen.</p>
+                  <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                    <div class="flecha-izquierda w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                    <div class="flecha-derecha w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
-          <div class="w-50">
-            <img src="imagen3.png" alt="imagen">
-            <h4>Creación y edición</h4>
-            <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que sus
-              videos se destaquen.</p>
-            <button class="btn btn-primary">(icono flecha)</button>
+          <div class="col-md-6">
+            <div style="background-color: #f1f1f1; border-radius: 20px; height: 100%;">
+              <img src="https://i.vimeocdn.com/custom_asset/bec136064b1c6d8d5267d2d2b996ceda?w=654&q=80" alt="imagen"
+                style="border-radius: 20px 20px 0 0;" class="img-fluid">
+              <div class="p-4">
+                <h4 class="h3 fw-bold">Creación y edición</h4>
+                <p>Cree y edite sus videos con nuestras sencillas herramientas. Agregue efectos, texto y más para que
+                  sus
+                  videos se destaquen.</p>
+                  <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                    <div class="flecha-izquierda w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                    <div class="flecha-derecha w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="seccion4">
-        <h5>Mejor flujo de trabajo, mejores resultados</h5>
-        <h3>Herramientas de video para potenciar cualquier negocio</h3>
-        <div class="d-flex">
-          <div class="w-50">
-            <img src="imgen2.png" alt="imagen">
+
+    </div>
+
+    <div class="seccion4 container-fluid py-5 mt-5" style="background-color: #f1f1f1;">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h5 class="h5">Mejor flujo de trabajo, mejores resultados</h5>
+          <h3 style="font-size: 60px; max-width: 700px; margin: 0 auto;" class="text-center fw-bold pb-5">Herramientas
+            de video para potenciar
+            cualquier negocio</h3>
+        </div>
+
+        <div class="row seccion4card mb-4">
+          <div class="col-md-6" style="padding-left: 0;">
+            <img src="https://i.vimeocdn.com/custom_asset/d8f85961c444e65106a23893aaa0b516?q=80" alt="imagen"
+              style="border-radius: 20px 0 0 20px;" class="img-fluid h-100 object-fit-cover">
           </div>
-          <div class="w-50">
-            <h4>Seguridad y cumplimiento</h4>
-            <p>Tanto si es una empresa de Fortune 500, una startup o una organización de otro tipo, descanse tranquilo
-              sabiendo que sus datos están seguros y logre sus objetivos de cumplimiento con nuestras herramientas de
-              seguridad integrales</p>
-            <button class="btn-primary">icono flecha</button>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="p-4">
+              <h4 class="h4">Seguridad y cumplimiento</h4>
+              <p>Tanto si es una empresa de Fortune 500, una startup o una organización de otro tipo, descanse
+                tranquilo
+                sabiendo que sus datos están seguros y logre sus objetivos de cumplimiento con nuestras herramientas
+                de
+                seguridad integrales</p>
+                <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                  <div class="flecha-izquierda w-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg>
+                  </div>
+                  <div class="flecha-derecha w-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
-        <div class="d-flex">
-          <div>
-            <img src="imgen2.png" alt="iamgen2">
-            <h3>Análisis</h3>
-            <p>Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el comportamiento de los
-              espectadores y a hacer los cambios necesarios para lograr mejores resultados en el futuro.</p>
-            <button class="btn btn-primary">icono flecha</button>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="seccion4card h-100">
+              <img src="https://i.vimeocdn.com/custom_asset/836af6d457bbf113ce959ce34f61697f?w=654&q=80" alt="iamgen2"
+                style="border-radius: 20px 20px 0 0;" class="img-fluid">
+              <div class="p-4">
+                <h3>Análisis</h3>
+                <p class="pb-4">Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el
+                  comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados
+                  en el futuro.</p>
+                  <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                    <div class="flecha-izquierda w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                    <div class="flecha-derecha w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="imgen2.png" alt="iamgen2">
-            <h3>Análisis</h3>
-            <p>Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el comportamiento de los
-              espectadores y a hacer los cambios necesarios para lograr mejores resultados en el futuro.</p>
-            <button class="btn btn-primary">icono flecha</button>
+          <div class="col-md-4">
+            <div class="seccion4card h-100">
+              <img src="https://i.vimeocdn.com/custom_asset/3d31f1a1d35d450eb05e4df251b9e1f3?w=654&q=80" alt="iamgen2"
+                style="border-radius: 20px 20px 0 0;" class="img-fluid">
+              <div class="p-4">
+                <h3>Análisis</h3>
+                <p class="pb-4">Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el
+                  comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados
+                  en el futuro.</p>
+                  <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                    <div class="flecha-izquierda w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                    <div class="flecha-derecha w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <img src="imgen2.png" alt="iamgen2">
-            <h3>Análisis</h3>
-            <p>Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el comportamiento de los
-              espectadores y a hacer los cambios necesarios para lograr mejores resultados en el futuro.</p>
-            <button class="btn btn-primary">icono flecha</button>
+          <div class="col-md-4">
+            <div class="seccion4card h-100">
+              <img src="https://i.vimeocdn.com/custom_asset/0567bb4d6854e1cc8b6754bfa2fc80f7?w=654&q=80" alt="iamgen2"
+                style="border-radius: 20px 20px 0 0;" class="img-fluid">
+              <div class="p-4">
+                <h3>Análisis</h3>
+                <p class="pb-4">Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el
+                  comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados
+                  en el futuro.</p>
+                  <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                    <div class="flecha-izquierda w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                    <div class="flecha-derecha w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                      </svg>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="footer">
-      <p>&copy; 2025 Vimeo. Todos los derechos reservados.</p>
+    <div class="seccion5 container py-5">
+      <div class="text-center mb-5">
+        <h5 class="h4">Casos de uso</h5>
+        <h3 style="font-size: 50px;">Cómo utilizan Vimeo los clientes</h3>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="seccion4card h-100">
+            <div class="ratio ratio-16x9 rounded-top">
+              <!-- Preguntar a carlos sobre esto -->
+              <iframe src="https://player.vimeo.com/video/436960717?h=f5b9927bde&title=0&byline=0&portrait=0&pip=false"
+                style="border-radius: 20px 20px 0 0;" allowfullscreen></iframe>
+                <!-- --------------------- -->
+            </div>
+            <div class="p-4">
+              <h3>Análisis</h3>
+              <p class="pb-4">Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el
+                comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados en
+                el futuro.</p>
+                <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                  <div class="flecha-izquierda w-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg>
+                  </div>
+                  <div class="flecha-derecha w-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="seccion4card h-100">
+            <div class="ratio ratio-16x9 rounded-top">
+              <iframe src="https://player.vimeo.com/video/764297424?h=04309e89de&title=0&byline=0&portrait=0&pip=false"
+                style="border-radius: 20px 20px 0 0;" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3>Análisis</h3>
+              <p class="pb-4">Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el
+                comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados en
+                el futuro.</p>
+                <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                  <div class="flecha-izquierda w-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg>
+                  </div>
+                  <div class="flecha-derecha w-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="seccion4card h-100">
+            <div class="ratio ratio-16x9 rounded-top">
+              <iframe src="https://player.vimeo.com/video/750432905?h=ab55dbe681&title=0&byline=0&portrait=0&pip=false"
+                style="border-radius: 20px 20px 0 0;" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3>Análisis</h3>
+              <p class="pb-4">Nuestros análisis avanzados de video en vivo y on-demand lo ayudan a comprender el
+                comportamiento de los espectadores y a hacer los cambios necesarios para lograr mejores resultados en
+                el futuro.</p>
+                <div class="rounded d-flex prueba-iconos py-3 px-4" style="color: black;">
+                  <div class="flecha-izquierda w-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg>
+                  </div>
+                  <div class="flecha-derecha w-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                    </svg>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="footer" style="background-color: rgb(15, 15, 15); color: white; text-align: left;">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h1>Probar gratis</h1>
+            <p>Precio</p>
+            <p>Comunicarse con Ventas</p>
+            <p>Ver demostraciones</p>
+          </div>
+          <div class="col-md-6">
+            <h1 class="">Atención al cliente 24x7</h1>
+            <p>Nuestro equipo de asistencia al cliente está disponible las 24 horas, los 7 días de la semana. Los
+              miembros de Enterprise también tienen acceso a administradores de cuentas especializados y a un ANS de
+              tiempo de actividad garantizado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
   <script type="module" src="/main.js"></script>
 </body>
